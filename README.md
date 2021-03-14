@@ -21,4 +21,7 @@ Vue.component("vue-formulate-star-rating", VueFormulateStarRating);
 
 ## Development
 
+- `npm install`
 - `npm run build`
+- make your changes
+- ``
