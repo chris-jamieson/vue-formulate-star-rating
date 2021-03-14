@@ -1,43 +1,44 @@
 // rollup.config.js
-import fs from 'fs';
-import path from 'path';
-import vue from 'rollup-plugin-vue';
-import alias from '@rollup/plugin-alias';
-import commonjs from '@rollup/plugin-commonjs';
-import resolve from '@rollup/plugin-node-resolve';
-import replace from '@rollup/plugin-replace';
-import babel from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
-import minimist from 'minimist';
+import fs from "fs";
+import path from "path";
+import vue from "rollup-plugin-vue";
+import alias from "@rollup/plugin-alias";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
+import babel from "@rollup/plugin-babel";
+import { terser } from "rollup-plugin-terser";
+import minimist from "minimist";
 
 // Get browserslist config and remove ie from es build targets
-const esbrowserslist = fs.readFileSync('./.browserslistrc')
+const esbrowserslist = fs
+  .readFileSync("./.browserslistrc")
   .toString()
-  .split('\n')
-  .filter((entry) => entry && entry.substring(0, 2) !== 'ie');
+  .split("\n")
+  .filter((entry) => entry && entry.substring(0, 2) !== "ie");
 
 const argv = minimist(process.argv.slice(2));
 
-const projectRoot = path.resolve(__dirname, '..');
+const projectRoot = path.resolve(__dirname, "..");
 
 const baseConfig = {
-  input: 'src/entry.js',
+  input: "src/entry.js",
   plugins: {
     preVue: [
       alias({
         entries: [
           {
-            find: '@',
-            replacement: `${path.resolve(projectRoot, 'src')}`,
+            find: "@",
+            replacement: `${path.resolve(projectRoot, "src")}`,
           },
         ],
         customResolver: resolve({
-          extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
+          extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"],
         }),
       }),
     ],
     replace: {
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      "process.env.NODE_ENV": JSON.stringify("production"),
     },
     vue: {
       css: true,
@@ -45,12 +46,11 @@ const baseConfig = {
         isProduction: true,
       },
     },
-    postVue: [
-    ],
+    postVue: [],
     babel: {
-      exclude: 'node_modules/**',
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
-      babelHelpers: 'bundled',
+      exclude: "node_modules/**",
+      extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"],
+      babelHelpers: "bundled",
     },
   },
 };
@@ -60,7 +60,9 @@ const baseConfig = {
 const external = [
   // list external dependencies, exactly the way it is written in the import statement.
   // eg. 'jquery'
-  'vue',
+  "vue",
+  "underscore",
+  "vue-star-rating",
 ];
 
 // UMD/IIFE shared settings: output.globals
@@ -68,20 +70,20 @@ const external = [
 const globals = {
   // Provide global variable names to replace your external imports
   // eg. jquery: '$'
-  vue: 'Vue',
+  vue: "Vue",
 };
 
 // Customize configs for individual targets
 const buildFormats = [];
-if (!argv.format || argv.format === 'es') {
+if (!argv.format || argv.format === "es") {
   const esConfig = {
     ...baseConfig,
-    input: 'src/entry.esm.js',
+    input: "src/entry.esm.js",
     external,
     output: {
-      file: 'dist/vue-formulate-star-rating.esm.js',
-      format: 'esm',
-      exports: 'named',
+      file: "dist/vue-formulate-star-rating.esm.js",
+      format: "esm",
+      exports: "named",
     },
     plugins: [
       replace(baseConfig.plugins.replace),
@@ -92,7 +94,7 @@ if (!argv.format || argv.format === 'es') {
         ...baseConfig.plugins.babel,
         presets: [
           [
-            '@babel/preset-env',
+            "@babel/preset-env",
             {
               targets: esbrowserslist,
             },
@@ -105,16 +107,16 @@ if (!argv.format || argv.format === 'es') {
   buildFormats.push(esConfig);
 }
 
-if (!argv.format || argv.format === 'cjs') {
+if (!argv.format || argv.format === "cjs") {
   const umdConfig = {
     ...baseConfig,
     external,
     output: {
       compact: true,
-      file: 'dist/vue-formulate-star-rating.ssr.js',
-      format: 'cjs',
-      name: 'VueFormulateStarRating',
-      exports: 'auto',
+      file: "dist/vue-formulate-star-rating.ssr.js",
+      format: "cjs",
+      name: "VueFormulateStarRating",
+      exports: "auto",
       globals,
     },
     plugins: [
@@ -135,16 +137,16 @@ if (!argv.format || argv.format === 'cjs') {
   buildFormats.push(umdConfig);
 }
 
-if (!argv.format || argv.format === 'iife') {
+if (!argv.format || argv.format === "iife") {
   const unpkgConfig = {
     ...baseConfig,
     external,
     output: {
       compact: true,
-      file: 'dist/vue-formulate-star-rating.min.js',
-      format: 'iife',
-      name: 'VueFormulateStarRating',
-      exports: 'auto',
+      file: "dist/vue-formulate-star-rating.min.js",
+      format: "iife",
+      name: "VueFormulateStarRating",
+      exports: "auto",
       globals,
     },
     plugins: [
