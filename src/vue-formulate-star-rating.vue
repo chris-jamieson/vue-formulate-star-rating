@@ -1,6 +1,5 @@
 <script>
 import StarRating from "vue-star-rating";
-import _ from "underscore";
 
 export default /*#__PURE__*/ {
   name: "VueFormulateStarRating", // vue component name
@@ -30,7 +29,15 @@ export default /*#__PURE__*/ {
     },
   },
   methods: {
-    omit: _.omit,
+    omit(obj, keys) {
+      let result = {};
+      for (const [key, value] of Object.entries(obj)) {
+        if (!keys.includes(key)) {
+          result[key] = value;
+        }
+      }
+      return result;
+    },
     onRatingSelected(rating) {
       this.context.rootEmit("rating-selected", rating);
     },

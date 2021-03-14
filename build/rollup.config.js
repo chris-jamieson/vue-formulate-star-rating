@@ -61,7 +61,6 @@ const external = [
   // list external dependencies, exactly the way it is written in the import statement.
   // eg. 'jquery'
   "vue",
-  "underscore",
   "vue-star-rating",
 ];
 
@@ -72,7 +71,6 @@ const globals = {
   // eg. jquery: '$'
   vue: "Vue",
   "vue-star-rating": "VueStarRating.default",
-  underscore: "_",
 };
 
 // Customize configs for individual targets
