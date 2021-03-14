@@ -71,6 +71,8 @@ const globals = {
   // Provide global variable names to replace your external imports
   // eg. jquery: '$'
   vue: "Vue",
+  "vue-star-rating": "VueStarRating.default",
+  underscore: "_",
 };
 
 // Customize configs for individual targets
