@@ -1,4 +1,4 @@
-import VueFormulateStarRating from "./vue-formulate-star-rating";
+import VueFormulateStarRating from "./VueFormulateStarRating";
 
 export default function VueFormulateStarRatingPlugin(formulateInstance) {
   formulateInstance.extend({

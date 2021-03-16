@@ -1632,20 +1632,20 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4005edc9-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/vue-formulate-star-rating.vue?vue&type=template&id=5cf1c25a&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7eaa4edb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueFormulateStarRating.vue?vue&type=template&id=32eb280c&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:("formulate-input-element formulate-input-element--" + (_vm.context.type) + " " + (_vm.context.classes.element)),attrs:{"data-type":_vm.context.type}},[_c('star-rating',_vm._b({on:{"rating-selected":_vm.onRatingSelected,"current-rating":_vm.onCurrentRating},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'star-rating',_vm.omit(_vm.context.attributes, 'class'),false))],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/vue-formulate-star-rating.vue?vue&type=template&id=5cf1c25a&scoped=true&
+// CONCATENATED MODULE: ./src/VueFormulateStarRating.vue?vue&type=template&id=32eb280c&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/vue-star-rating/dist/VueStarRating.common.js
 var VueStarRating_common = __webpack_require__("5b3d");
 var VueStarRating_common_default = /*#__PURE__*/__webpack_require__.n(VueStarRating_common);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/vue-formulate-star-rating.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueFormulateStarRating.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var vue_formulate_star_ratingvue_type_script_lang_js_ = (/*#__PURE__*/{
+/* harmony default export */ var VueFormulateStarRatingvue_type_script_lang_js_ = (/*#__PURE__*/{
   name: "VueFormulateStarRating",
   // vue component name
   components: {
@@ -1701,8 +1701,8 @@ var VueStarRating_common_default = /*#__PURE__*/__webpack_require__.n(VueStarRat
 
   }
 });
-// CONCATENATED MODULE: ./src/vue-formulate-star-rating.vue?vue&type=script&lang=js&
- /* harmony default export */ var src_vue_formulate_star_ratingvue_type_script_lang_js_ = (vue_formulate_star_ratingvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/VueFormulateStarRating.vue?vue&type=script&lang=js&
+ /* harmony default export */ var src_VueFormulateStarRatingvue_type_script_lang_js_ = (VueFormulateStarRatingvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -1803,7 +1803,7 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./src/vue-formulate-star-rating.vue
+// CONCATENATED MODULE: ./src/VueFormulateStarRating.vue
 
 
 
@@ -1812,23 +1812,23 @@ function normalizeComponent (
 /* normalize component */
 
 var component = normalizeComponent(
-  src_vue_formulate_star_ratingvue_type_script_lang_js_,
+  src_VueFormulateStarRatingvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
   null,
-  "5cf1c25a",
+  "32eb280c",
   null
   
 )
 
-/* harmony default export */ var vue_formulate_star_rating = (component.exports);
+/* harmony default export */ var VueFormulateStarRating = (component.exports);
 // CONCATENATED MODULE: ./src/main.js
 
 function VueFormulateStarRatingPlugin(formulateInstance) {
   formulateInstance.extend({
     components: {
-      VueFormulateStarRating: vue_formulate_star_rating
+      VueFormulateStarRating: VueFormulateStarRating
     },
     library: {
       "star-rating": {
