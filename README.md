@@ -16,29 +16,21 @@ It's a good idea to familiarise yourself with the Vue Formulate documentation on
 2. Register the component
 
    ```js
-   import FormulateStarRating from "vue-formulate-star-rating";
+   import Vue from "vue";
+   import VueFormulate from "@braid/vue-formulate";
 
-   Vue.component("FormulateStarRating", FormulateStarRating);
-   ```
+   import VueFormulateStarRating from "vue-formulate-star-rating";
 
-3. Register a custom Formulate input
-   ```js
+   // add plugin to VueFormulate
    Vue.use(VueFormulate, {
-     library: {
-       rating: {
-         classification: "number",
-         component: "FormulateStarRating",
-       },
-     },
-     classes: {
-       // ...
-     },
+     plugins: [VueFormulateStarRating],
    });
    ```
-4. Use in a Formulate form
+
+3. Use in a Formulate form
    ```js
    <FormulateInput
-     type="rating"
+     type="star-rating"
      name="productRating"
      label="Rate this product"
      help="How would you rate this product?"
@@ -55,27 +47,15 @@ It's a good idea to familiarise yourself with the Vue Formulate documentation on
    <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>
    <script src="https://unpkg.com/vue-formulate-star-rating/dist/vue-formulate-star-rating.min.js"></script>
    ```
-2. Register the component within your main `<script>` tag:
-   ```js
-   Vue.component("vue-formulate-star-rating", VueFormulateStarRating);
-   ```
-3. Register a custom Formulate input
+2. Register a custom Formulate input
    ```js
    Vue.use(VueFormulate, {
-     library: {
-       rating: {
-         classification: "number",
-         component: "vue-formulate-star-rating",
-       },
-     },
-     classes: {
-       // ...
-     },
+     plugins: [VueFormulateStarRating],
    });
    ```
-4. Use in your form
+3. Use in your form
    ```js
-   <formulate-input type="rating" label="Product rating" name="rating" help="Rate this" :show-rating="false" validation="required"></formulate-input>
+   <formulate-input type="star-rating" label="Product rating" name="rating" help="Rate this" :show-rating="false" validation="required"></formulate-input>
    ```
 
 Note: as per the [Vue Formulate docs](https://vueformulate.com/guide/installation/#direct-download):
@@ -111,7 +91,6 @@ Contributions and issues welcome, please file a PR or raise an issue [on GitHub]
 ## Development
 
 - `npm install`
-- `npm run build`
 - make your changes
 - `npm run build`
 - `npm version patch`
