@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vue-formulate-star-rating"] = factory();
+		exports["VueFormulateStarRating"] = factory();
 	else
-		root["vue-formulate-star-rating"] = factory();
+		root["VueFormulateStarRating"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -1632,7 +1632,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7eaa4edb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueFormulateStarRating.vue?vue&type=template&id=32eb280c&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"79e309bd-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueFormulateStarRating.vue?vue&type=template&id=32eb280c&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:("formulate-input-element formulate-input-element--" + (_vm.context.type) + " " + (_vm.context.classes.element)),attrs:{"data-type":_vm.context.type}},[_c('star-rating',_vm._b({on:{"rating-selected":_vm.onRatingSelected,"current-rating":_vm.onCurrentRating},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'star-rating',_vm.omit(_vm.context.attributes, 'class'),false))],1)}
 var staticRenderFns = []
 
@@ -1849,4 +1849,4 @@ function VueFormulateStarRatingPlugin(formulateInstance) {
 
 /******/ });
 });
-//# sourceMappingURL=vue-formulate-star-rating.umd.js.map
+//# sourceMappingURL=VueFormulateStarRating.umd.js.map
