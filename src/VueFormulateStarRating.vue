@@ -1,7 +1,23 @@
+<template>
+  <div
+    :data-type="context.type"
+    :class="
+      `formulate-input-element formulate-input-element--${context.type} ${context.classes.element}`
+    "
+  >
+    <star-rating
+      v-model="model"
+      @rating-selected="onRatingSelected"
+      @current-rating="onCurrentRating"
+      v-bind="omit(context.attributes, 'class')"
+    ></star-rating>
+  </div>
+</template>
+
 <script>
 import StarRating from "vue-star-rating";
 
-export default /*#__PURE__*/ {
+export default {
   name: "VueFormulateStarRating", // vue component name
   components: {
     StarRating,
@@ -47,21 +63,3 @@ export default /*#__PURE__*/ {
   },
 };
 </script>
-
-<template>
-  <div
-    :data-type="context.type"
-    :class="
-      `formulate-input-element formulate-input-element--${context.type} ${context.classes.element}`
-    "
-  >
-    <star-rating
-      v-model="model"
-      @rating-selected="onRatingSelected"
-      @current-rating="onCurrentRating"
-      v-bind="omit(context.attributes, 'class')"
-    ></star-rating>
-  </div>
-</template>
-
-<style scoped></style>
