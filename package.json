@@ -21,7 +21,7 @@
   "main": "dist/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-formulate-star-rating src/main.js",
     "lint": "vue-cli-service lint",
     "prebuild": "rm -rf dist/"
   },
