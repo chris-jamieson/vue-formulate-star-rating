@@ -1,5 +1,8 @@
 # Vue Formulate Star Rating Input
 
+![Version Shield](https://img.shields.io/npm/v/vue-formulate-star-rating)
+![Licence Shield](https://img.shields.io/npm/l/vue-formulate-star-rating)
+
 A simple wrapper component for the excellent [vue-star-rating](https://www.npmjs.com/package/vue-star-rating) package by [craigh411](https://github.com/craigh411).
 
 This component allows you to use a star rating as a custom input as a [Vue Formulate Plugin](https://vueformulate.com/guide/plugins/).
@@ -40,7 +43,6 @@ This component allows you to use a star rating as a custom input as a [Vue Formu
 
 1. Include the `vue-formulate-star-rating`.
    ```html
-   <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>
    <script src="https://unpkg.com/vue-formulate-star-rating/dist/VueFormulateStarRating.umd.min.js"></script>
    ```
 2. Register a custom Formulate input
