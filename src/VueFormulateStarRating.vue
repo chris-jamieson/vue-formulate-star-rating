@@ -18,7 +18,6 @@
 import StarRating from "vue-star-rating";
 
 export default {
-  name: "VueFormulateStarRating", // vue component name
   components: {
     StarRating,
   },
@@ -27,9 +26,6 @@ export default {
       type: Object,
       required: true,
     },
-  },
-  data() {
-    return {};
   },
   computed: {
     model: {

@@ -13,6 +13,7 @@
     "url": "https://github.com/jamiesoncj/vue-formulate-star-rating/issues"
   },
   "author": "Chris Jamieson <hi@chrisjamieson.me> (chrisjamieson.me)",
+  "license": "LGPL",
   "repository": {
     "type": "git",
     "url": "https://github.com/jamiesoncj/vue-formulate-star-rating.git"
@@ -38,10 +39,9 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
   },
-  "peerDependencies": {
-    "vue": "^2.6.12"
-  },
   "dependencies": {
+    "@braid/vue-formulate": "^2.5.2",
+    "vue": "^2.6.12",
     "vue-star-rating": "^1.7.0"
   },
   "engines": {
