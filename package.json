@@ -19,12 +19,13 @@
     "url": "https://github.com/jamiesoncj/vue-formulate-star-rating.git"
   },
   "private": false,
-  "main": "dist/index.js",
+  "main": "./dist/vue-formulate-star-rating.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-formulate-star-rating src/main.js",
     "lint": "vue-cli-service lint",
-    "prebuild": "rm -rf dist/"
+    "prebuild": "rm -rf dist/",
+    "postbuild": "rm dist/demo.html"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.9",
