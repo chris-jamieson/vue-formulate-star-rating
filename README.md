@@ -2,11 +2,7 @@
 
 A simple wrapper component for the excellent [vue-star-rating](https://www.npmjs.com/package/vue-star-rating) package by [craigh411](https://github.com/craigh411).
 
-This component allows you to use a star rating as a custom input in [Vue Formulate](https://vueformulate.com/).
-
-Package built using [vue-sfc-rollup](https://github.com/team-innovation/vue-sfc-rollup).
-
-It's a good idea to familiarise yourself with the Vue Formulate documentation on [custom input types](https://vueformulate.com/guide/inputs/custom-inputs/)
+This component allows you to use a star rating as a custom input as a [Vue Formulate Plugin](https://vueformulate.com/guide/plugins/).
 
 ## Installation
 

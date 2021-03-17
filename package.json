@@ -19,7 +19,7 @@
     "url": "https://github.com/jamiesoncj/vue-formulate-star-rating.git"
   },
   "private": false,
-  "main": "./dist/vue-formulate-star-rating.common.js",
+  "main": "./dist/VueFormulateStarRating.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VueFormulateStarRating src/main.js",
