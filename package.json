@@ -22,7 +22,7 @@
   "main": "./dist/vue-formulate-star-rating.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-formulate-star-rating src/main.js",
+    "build": "vue-cli-service build --target lib --name VueFormulateStarRating src/main.js",
     "lint": "vue-cli-service lint",
     "prebuild": "rm -rf dist/",
     "postbuild": "rm dist/demo.html"

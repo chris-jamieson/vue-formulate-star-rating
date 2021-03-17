@@ -12,14 +12,13 @@ It's a good idea to familiarise yourself with the Vue Formulate documentation on
 
 ### Using NPM and webpack
 
-1. `npm install --save vue-formulate-star-rating vue-star-rating`
+1. `npm install --save vue-formulate-star-rating`
 2. Register the component
 
    ```js
    import Vue from "vue";
    import VueFormulate from "@braid/vue-formulate";
 
-   import StarRating from "vue-star-rating";
    import VueFormulateStarRating from "vue-formulate-star-rating";
 
    // add plugin to VueFormulate
@@ -43,15 +42,15 @@ It's a good idea to familiarise yourself with the Vue Formulate documentation on
 
 ### Using script tags
 
-1. Include the `vue-formulate-star-rating` library _and_ the `vue-star-rating` library.
+1. Include the `vue-formulate-star-rating`.
    ```html
    <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>
-   <script src="https://unpkg.com/vue-formulate-star-rating/dist/dist/vue-formulate-star-rating.umd.min.js"></script>
+   <script src="https://unpkg.com/vue-formulate-star-rating/dist/VueFormulateStarRating.umd.min.js"></script>
    ```
 2. Register a custom Formulate input
    ```js
    Vue.use(VueFormulate, {
-     plugins: [VueFormulateStarRating],
+     plugins: [VueFormulateStarRating.default],
    });
    ```
 3. Use in your form
